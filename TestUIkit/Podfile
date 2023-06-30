@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+use_frameworks!
+workspace 'TestUIkit.xcworkspace'
+
+def app_pods
+  pod 'SnapKit', '~> 5.6.0'
+end
+
+target 'TestUIkit' do
+  project ‘TestUIkit.xcodeproj’
+  app_pods
+end
+
+target 'TestFramework' do
+  project ‘./TestFramework/TestFramework.xcodeproj’
+  app_pods
+end
